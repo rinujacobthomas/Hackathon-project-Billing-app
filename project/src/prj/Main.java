@@ -19,7 +19,7 @@ class Main
  {
 	 public static void main(String [] args)
 	 {
-		 A a = new A();
+		 A a = new A();							//calling class A constructor for display
 	 }
  }
  class A extends JFrame implements ActionListener
@@ -37,11 +37,11 @@ class Main
 	 JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15,b16,b17,b18,b19,b20,b21,b22,b23,b24,b25;
 	 JComboBox c1,c2;
 	 A()
-	 {
+	 {									//frame and all components
 		 setVisible(true);
 		 setLayout(null);
 		 setSize(1500,1000);
-		 setDefaultCloseOperation(3);
+		 setDefaultCloseOperation(3);				//enable close button
 		l1= new JLabel("Chicken burger"); 
 		add(l1);
 		l1.setBounds(20, 20, 200, 20);
@@ -167,7 +167,7 @@ class Main
 	 }
 	 int a=0,b=0,c=0,d=0,total=0,ckbr=0,ckbrml=0,csbr=0,drno=0,dl,tx;
 	 String drink;
-	public void actionPerformed(ActionEvent ar) {
+	public void actionPerformed(ActionEvent ar) {			//working
 		if(ar.getSource()==b1)
 		{
 			ckbr=Integer.parseInt(t1.getText());
