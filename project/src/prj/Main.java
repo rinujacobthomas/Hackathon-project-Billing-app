@@ -217,14 +217,14 @@ class Main
 			l19.setText(total+"");
 			
 			try {
-				Statement st = conn().createStatement();
+				Statement st = conn().createStatement(); //Inserting to Database
 				st.execute("insert into receipt values("+ckbr+","+ckbrml+","+csbr+",'"+drink+"',"+drno+","+d+","+a+","+dl+","+tx+","+total+")");
 			} catch (SQLException | ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		else if(ar.getSource()==b5)
+		else if(ar.getSource()==b5)		//Conveting to Dollar
 		{
 			if(c2.getSelectedItem()=="Dollar")
 			{
@@ -235,7 +235,7 @@ class Main
 				l21.setText(total/20+"");
 			}
 		}
-		else if(ar.getSource()==b6)
+		else if(ar.getSource()==b6)		//Resetting Fields
 		{
 			l21.setText("..");
 		}
@@ -255,7 +255,7 @@ class Main
 	               {
 	                   
 	                    JLabel pdname1;
-							pdname1 = new JLabel(rs.getString(1));
+			    pdname1 = new JLabel(rs.getString(1));
 	                    pdname1.setBounds(10,400+a,150,30);;
 	                    add(pdname1);
 	                       
@@ -274,7 +274,7 @@ class Main
 			}
 			
 		}
-		else if(ar.getSource()==b3)
+		else if(ar.getSource()==b3)		//Resetting textFields
 		{
 			t1.setText("");
 			t2.setText("");
@@ -289,9 +289,9 @@ class Main
 			l18.setText("..");
 			l19.setText("..");
 		}
-		else if(ar.getSource()==b7)
+		else if(ar.getSource()==b7)		//unhiding Calculator
 		{
-			 t6= new JTextField();
+			 t6= new JTextField();			//Calculator buttons and textFields
 			 add(t6);
 			 t6.setBounds(750, 80, 200, 40);
 			b9=new JButton("1");
